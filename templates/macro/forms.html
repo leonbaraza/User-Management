@@ -1,0 +1,14 @@
+
+{% macro input(name, value='', type='') -%}
+    <input type="{{ type }}" name="{{ name }}" value="{{ value }}">
+{%- endmacro %}
+
+
+{% macro textarea(name, cols="", rows="", value='') -%}
+    <textarea name="{{ name }}" cols="{{ cols }}" rows="{{ rows }}">{{value|e}}</textarea>
+{%- endmacro %}
+
+
+{% macro button(name, type='', class='') -%}
+    <button type="{{ type }}" class="{{ class }}">{{name}}</button>
+{%- endmacro %}

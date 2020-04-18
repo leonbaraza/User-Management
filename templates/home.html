@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% import 'macro/forms.html' as forms  %}
+
+{% block title %}
+    Home page
+{% endblock %}
+
+{% block content -%}
+    {{ super() }}
+    <h4>Welcome to my home page</h4>
+    
+    <dl>
+        <dt>Username</dt>
+        <dd>{{ forms.input('username', type='text') }}</dd>
+        
+        <dt>Password</dt>
+        <dd>{{ forms.input('password', type='password') }}</dd>     
+    </dl>
+
+    <p>{{ forms.textarea('comment', cols=30, rows=7) }}</p>
+
+    <p>{{ forms.button('Save', type='submit') }}</p>
+{%- endblock %}

@@ -1,0 +1,7 @@
+body{
+    background-color: rgb(199, 194, 194);
+    color: black;
+}
+.active a.nav-link {
+    color: red !important;
+}
